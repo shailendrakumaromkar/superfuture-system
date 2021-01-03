@@ -141,6 +141,7 @@ function borrowerInterest(address borrower, uint8 creditStore, uint8 collateralR
 | `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
 |`assetSupply`|uint256|Supply of asset available in pool |
 
+##### Sample Test Data
 
 | Credit Score| Collatoral Ratio% |Utilisation Rate%  |Interest Rate%|
 | ------------- | ------------- | ------------- |------------- |
