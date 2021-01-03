@@ -110,8 +110,8 @@ function repay(string type,address asset, uint256 repayAmount, uint256 interestR
 -  emit borrow `event` based on function parameters.
 -  Returns `true` if borrow is success.
 
-##### creditScore()  
-function creditScore(address borrower) public returns (uint8) {}  
+##### getCreditScore()  
+function getCreditScore(address borrower) public returns (uint8) {}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
