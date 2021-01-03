@@ -25,7 +25,10 @@ NOTE:
 ### Solution
 Create Architecture Diagram with below smart contract function details:
 
-#### State variable : TBD
+#### State variable : More to come
+uint256 liquidationThresholdUSDC = 85;
+uint256 liquidationThresholdETH = 82.5;
+uint256 borrowingAmount;
 
 #### Struct : TBD
 
@@ -150,8 +153,19 @@ function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 asset
 
 -  Returns borrower interest based on specific condition met.
 
+##### liquidationfactor()
+liquidationfactor(address asset, uint256 liquidationThreshold, uint256 borrowingAmount) public returns (uint8) {}
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `asset`  | address  |address of the asset |
+| `liquidationThreshold`  | uint256  | Liquidation threshold of asset|
+|`borrowingAmount`|uint256|Borrowing amount |
+
+-  Returns liquidationfactor, if it's <1 then liquidationCall() will be called
+
 ##### liquidationCall()  
-function liquidationCall(address collateral, address asset, address borrower, uint256 debtAmount) (){}
+function liquidationCall(address collateral, address asset, address borrower, uint256 debtAmount) (){
+require (liquidationfactor <1, "Collatoral is not available for liquidation") }
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
