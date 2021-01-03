@@ -186,12 +186,11 @@ function getUserData(address user) public returns() {}
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `totalCollateralETH`  | uint256  |total collateral in ETH of the user|
-| `totalDebtETH`  | uint256  | total debt in ETH of the user |
-|`availableBorrowsETH`|uint256|borrowing power left of the user |
+| `totalCollateral`  | uint256  |total collateral in ETH of the user|
+| `totalDebt`  | uint256  | total debt in ETH of the user |
+|`availableBorrows`|uint256|borrowing power left of the user |
 |`currentLiquidationThreshold`|uint256|liquidation threshold of the user|
-|ltv|uint256|Loan To Value of the user|
-|healthFactor|uint256|current health factor of the user|
+|`liquidationfactor`|uint8|current liquidation factor of the user|
 
 
 ## Assignment2
