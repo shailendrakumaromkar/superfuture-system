@@ -43,7 +43,7 @@ uint256 borrowingAmount;
 
 
 #### Modifiers : TBD
-
+onlyDepositor() {} - Only depositor can take the action
 
 #### Methods
 ##### deposit()  
@@ -105,7 +105,7 @@ function repay(string type,address asset, uint256 repayAmount, uint256 interestR
 |`type`|string|Type of cryptocurrency to repay "ETH" , "USDC"|
 | `asset`  | address  |Address of asset - "ETH" & "USDC" |
 | `repayAmount`  | uint256  |Amounnt to be repay = collateral + interest|
-|`repayer`|address| Address of repayer, external person can also repay amount on bhalf of borrower |
+|`repayer`|address| Address of repayer, external person can also repay amount on behalf of borrower |
 
 -  emit borrow `event` based on function parameters.
 -  Returns `true` if borrow is success.
