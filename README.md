@@ -28,14 +28,12 @@ Create Architecture Diagram with below smart contract function details:
 #### Sample Test Data  
 
 | Asset|Liquidation Threshold |  
-| ------------- | ------------- | ------------- |  
+| ------------- | ------------- |
 |`ETH`|82.5%|  
 | `USDC`  | 85%|  
 
 
 #### State variable : More to come
-uint256 liquidationThresholdUSDC = 85;  
-uint256 liquidationThresholdETH = 82.5;  
 uint256 borrowingAmount;  
 
 #### Struct : TBD
