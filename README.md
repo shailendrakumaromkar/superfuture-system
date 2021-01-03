@@ -196,6 +196,6 @@ Written Smart Contract based on above requirement specs mentioned-
 
 -  Betting.sol  
 -  players[] : This will pull all addresses that have interacted with the above lottery system using web3 calls.
--  playersTotalBet : This will give volume of bets per user.
+-  playersTotalBet : This will give volume of bets per players.
 
 **Note** : Frontend part couldn't completed yet as I am still learning & it will take some more time to complete.
