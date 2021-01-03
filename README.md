@@ -128,8 +128,8 @@ f. function approvedBorrowingAmount (uint8 creditScore, address borrowerAddress)
 | `creditScore`  | uint8  | Credit score of a  borrower:  <br> 1.  creditScore >300 & creditScore <579  <br> approvedBorrowingAmount = 20% of deposit amount <br>  <br> 2.  creditScore >580 & creditScore <669  <br> approvedBorrowingAmount = 50% of deposit amount <br>  <br> 3.  creditScore >670 & creditScore <739  <br> approvedBorrowingAmount = 60%  of deposit amount<br>  <br> 4.  creditScore >740 & creditScore <799  <br> approvedBorrowingAmount = 70% of deposit amount<br>  <br> 5.  creditScore >800 & creditScore <850  <br> approvedBorrowingAmount = 80% of deposit amount <br> |
 | `borrowerAddress`  | address  | Address of borrower|
 
--  emit allowed borrowing amount `event` based on function parameters.
--  Returns allowed borrowing amount based on specific condition met.
+-  emit approved borrowing amount `event` based on function parameters.
+-  Returns approved borrowing amount based on specific condition met.
 
 ##### borrowerInterest()  
 function borrowerInterest(address borrower, uint8 creditStore, uint8 collateralRatio, uint256 assetSupply ){}  
