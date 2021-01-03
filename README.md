@@ -25,30 +25,26 @@ NOTE:
 ### Solution
 Create Architecture Diagram with below smart contract function details:
 
-#### State variable
-uint8 closeFactor = 0.5
+#### State variable : TBD
 
-#### Struct
-
-
-#### Events
+#### Struct : TBD
 
 
-#### Enums
+#### Events : TBD
 
 
-#### Mappings
+#### Enums : TBD
 
 
-#### Modifiers
-a. onlyDepositor() {}
-b. 
+#### Mappings : TBD
 
+
+#### Modifiers : TBD
 
 
 #### Methods
 ##### deposit()  
-function deposit(string type, address asset, uint256 amount, address depositor) public returns (bool) {}  
+function deposit (string type, address asset, uint256 amount, address depositor) public returns (bool) {}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -57,8 +53,11 @@ function deposit(string type, address asset, uint256 amount, address depositor) 
 | `amount`  | uint256  | Amount to deposit|
 |`depositor`|address| Address of depositor, external person can also deposit to same account on behalf of depositor|
 
+-  emit deposit `event` based on function parameters.
+-  Returns `true` if deposit is success.
+
 ##### withdraw()  
-function withdraw(string type, address asset, uint256 amount, address receiver) onlyDepositor public returns  (bool){}  
+function withdraw(string type, address asset, uint256 amount, address receiver) onlyDepositor public returns (bool){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -67,6 +66,8 @@ function withdraw(string type, address asset, uint256 amount, address receiver) 
 | `amount`  | uint256  | Amount to withdraw|
 |`receiver`|address| Who will recieve the amount back to his account|
 
+-  emit withdraw `event` based on function parameters.
+-  Returns `true` if withdraw is success.
 
 ##### checkAllowedCollateral()
 function checkAllowedCollateral(address asset, bool allowedeCollateral) public returns (bool) {}
@@ -75,6 +76,8 @@ function checkAllowedCollateral(address asset, bool allowedeCollateral) public r
 | ------------- | ------------- | ------------- |
 | `asset`  | address  | Address of asset - "ETH" & "USDC"|
 | `allowedeCollateral`  | bool  | true if the asset should be used as collateral <br> ETH = true|
+
+-  Returns `true` if asset type is allowed to be use as collatoral.
 
 
 ##### borrow()  
@@ -88,6 +91,9 @@ function borrow(string type, address asset, uint256 borrowingAmount, uint256 int
 |`interestRate`|uint256|Interest rate to be levied based on f(A)|
 |`receiver`|address|Borrower address|
 
+-  emit borrow `event` based on function parameters.
+-  Returns `true` if borrow is success.
+
 ##### repay()  
 function repay(string type,address asset, uint256 repayAmount, uint256 interestRate, address repayer) public returns  (bool){}  
 
@@ -98,6 +104,9 @@ function repay(string type,address asset, uint256 repayAmount, uint256 interestR
 | `repayAmount`  | uint256  |Amounnt to be repay = collateral + interest|
 |`repayer`|address| Address of repayer, external person can also repay amount on bhalf of borrower |
 
+-  emit borrow `event` based on function parameters.
+-  Returns `true` if borrow is success.
+
 ##### creditScore()  
 function creditScore(address borrower) public returns (uint8) {}  
 
@@ -105,6 +114,8 @@ function creditScore(address borrower) public returns (uint8) {}
 | ------------- | ------------- | ------------- |
 | `borrower`  | Address|Address of borrower whose Credit Score to be fetched |
 
+-  emit creditScore `event` based on function parameters.
+-  Returns credit score between 300 & 850.
 
 ##### allowedBorrowingAmount()  
 f. function allowedBorrowingAmount (uint8 creditScore, address borrowerAddress) public returns (uint256){}  
@@ -114,6 +125,8 @@ f. function allowedBorrowingAmount (uint8 creditScore, address borrowerAddress) 
 | `creditScore`  | uint8  | Credit score of a  borrower:  <br> 1.  creditScore >300 & creditScore <579  <br> allowedBorrowingAmount = 20% <br>  <br> 2.  creditScore >580 & creditScore <669  <br> allowedBorrowingAmount = 50% <br>  <br> 3.  creditScore >670 & creditScore <739  <br> allowedBorrowingAmount = 60% <br>  <br> 4.  creditScore >740 & creditScore <799  <br> allowedBorrowingAmount = 70% <br>  <br> 5.  creditScore >800 & creditScore <850  <br> allowedBorrowingAmount = 80% <br> |
 | `borrowerAddress`  | address  | Address of borrower|
 
+-  emit allowed borrowing amount `event` based on function parameters.
+-  Returns allowed borrowing amount based on specific condition met.
 
 ##### borrowerInterest()  
 function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 assetSupply ){}  
@@ -135,9 +148,10 @@ function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 asset
 |400|150|90|60|
 |300|120|95|70|
 
+-  Returns borrower interest based on specific condition met.
 
 ##### liquidationCall()  
-function liquidationCall(address collateral, address asset, address borrower, uint256 debtAmount) public returns (){}
+function liquidationCall(address collateral, address asset, address borrower, uint256 debtAmount) (){}
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
