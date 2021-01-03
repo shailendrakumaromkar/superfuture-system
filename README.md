@@ -186,12 +186,15 @@ function getUserData(address user) public returns() {}
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `totalCollateral`  | uint256  |total collateral in ETH of the user|
-| `totalDebt`  | uint256  | total debt in ETH of the user |
-|`availableBorrows`|uint256|borrowing power left of the user |
+| `totalCollateralETH`  | uint256  |total collateral in ETH of the user|
+| `totalDebtETH`  | uint256  | total debt in ETH of the user |
+|`availableBorrowsETH`|uint256|borrowing power left of the user |
 |`currentLiquidationThreshold`|uint256|liquidation threshold of the user|
 |`liquidationfactor`|uint8|current liquidation factor of the user|
 
+##### paused()
+paused() :  Used as circuit breaker design pattern, in case of any bug, pause the contract
+Returns `true` if the LendingPool is paused
 
 ## Assignment2
 2. Create and deploy (to testnet) a very simple smart contract system that does the
