@@ -178,9 +178,10 @@ the above lottery system (using web3 calls or however else), as well as the volu
 user.
 
 ### Solution
-Written Smart Contract base on below requirement specs above mentioned-
+Written Smart Contract based on above requirement specs mentioned-
 
-Betting.sol  
+-  Betting.sol  
+-  players[] : This will pull all addresses that have interacted with the above lottery system using web3 calls.
+-  playersTotalBet : This will give volume of bets per user.
 
-Note : Frontend part couldn't completed yet as I am still learning & it will take some more time to complete.
-##### borrowerInterest()  web3.JS
+**Note** : Frontend part couldn't completed yet as I am still learning & it will take some more time to complete.
