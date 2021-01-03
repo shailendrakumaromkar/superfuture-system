@@ -1,26 +1,38 @@
 {
   "name": "superfuture-system",
-  "version": "1.0.0",
-  "description": "1. Create the architecture of a smart contract based system that has the following\r properties:  \r a. Lenders can deposit ETH and USDC into Bank A  \r b. Borrowers can deposit ETH as collateral and borrow  \r c. Bank A can find out the credit score C of any Borrower B  \r d. Borrower B can borrow from Bank A an amount up to a function of the credit score = f(A)  \r e. The borrow interest rate is decided by the credit score = I(A), the collateral ratio and the supply of the borrowed asset. If the borrower has deposited more\r collateral, then the interest rate is lower. If the supply of the borrowed asset is low and the demand is high, the interest rate is higher.  \r f. The collateral ratio is at least 120%. Liquidation happens at 100%.  \r g. Borrower receives collateral - interest_paid back when the borrowed amount is returned.  \r h. Bank A deposits any unused ETH and USDC into compound and aave to collect interest",
-  "main": "truffle-config.js",
-  "directories": {
-    "test": "test"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "react": "^17.0.1"
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shailendrakumaromkar/superfuture-system.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shailendrakumaromkar/superfuture-system/issues"
-  },
-  "homepage": "https://github.com/shailendrakumaromkar/superfuture-system#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

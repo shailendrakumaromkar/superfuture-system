@@ -182,4 +182,5 @@ Written Smart Contract base on below requirement specs above mentioned-
 
 Betting.sol  
 
+Note : Frontend part is not completed yet as I am still learning it.
 ##### borrowerInterest()  web3.JS
