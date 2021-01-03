@@ -132,10 +132,11 @@ f. function allowedBorrowingAmount (uint8 creditScore, address borrowerAddress) 
 -  Returns allowed borrowing amount based on specific condition met.
 
 ##### borrowerInterest()  
-function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 assetSupply ){}  
+function borrowerInterest(address borrower, uint8 creditStore, uint8 collateralRatio, uint256 assetSupply ){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
+|borrower|address|Borrower address|
 | `creditStore`  | uint8  |Credit score of borrower |
 | `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
 |`assetSupply`|uint256|Supply of asset available in pool |
@@ -151,7 +152,7 @@ function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 asset
 |400|150|90|60|
 |300|120|95|70|
 
--  Returns borrower interest based on specific condition met.
+-  Returns borrower interest based on specific condition met for a borrower.
 
 ##### liquidationfactor()
 liquidationfactor(address asset, uint256 liquidationThreshold, uint256 borrowingAmount) public returns (uint8) {}
