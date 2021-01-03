@@ -25,6 +25,8 @@ NOTE:
 ### Solution
 Create Architecture Diagram with below smart contract function details:
 
+#### Libraries : TBD
+
 #### Sample Test Data  
 
 | Asset|Liquidation Threshold |  
