@@ -164,7 +164,7 @@ liquidationfactor(address asset, uint256 liquidationThreshold, uint256 borrowing
 -  Returns liquidationfactor, if it's <1 then liquidationCall() will be called
 
 ##### liquidationCall()  
-function liquidationCall(address collateral, address asset, address borrower, uint256 debtAmount) (){
+function liquidationCall(address collateral, address asset, address borrower, uint256 debtAmount) (){  
 require (liquidationfactor <1, "Collatoral is not available for liquidation") }
 
 | Parameter Name | Type |Description |
