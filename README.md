@@ -120,12 +120,12 @@ function getCreditScore(address borrower) public returns (uint8) {}
 -  emit creditScore `event` based on function parameters.
 -  Returns credit score between 300 & 850.
 
-##### allowedBorrowingAmount()  
-f. function allowedBorrowingAmount (uint8 creditScore, address borrowerAddress) public returns (uint256){}  
+##### approvedBorrowingAmount()  
+f. function approvedBorrowingAmount (uint8 creditScore, address borrowerAddress) public returns (uint256){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `creditScore`  | uint8  | Credit score of a  borrower:  <br> 1.  creditScore >300 & creditScore <579  <br> allowedBorrowingAmount = 20% of deposit amount <br>  <br> 2.  creditScore >580 & creditScore <669  <br> allowedBorrowingAmount = 50% of deposit amount <br>  <br> 3.  creditScore >670 & creditScore <739  <br> allowedBorrowingAmount = 60%  of deposit amount<br>  <br> 4.  creditScore >740 & creditScore <799  <br> allowedBorrowingAmount = 70% of deposit amount<br>  <br> 5.  creditScore >800 & creditScore <850  <br> allowedBorrowingAmount = 80% of deposit amount <br> |
+| `creditScore`  | uint8  | Credit score of a  borrower:  <br> 1.  creditScore >300 & creditScore <579  <br> approvedBorrowingAmount = 20% of deposit amount <br>  <br> 2.  creditScore >580 & creditScore <669  <br> approvedBorrowingAmount = 50% of deposit amount <br>  <br> 3.  creditScore >670 & creditScore <739  <br> approvedBorrowingAmount = 60%  of deposit amount<br>  <br> 4.  creditScore >740 & creditScore <799  <br> approvedBorrowingAmount = 70% of deposit amount<br>  <br> 5.  creditScore >800 & creditScore <850  <br> approvedBorrowingAmount = 80% of deposit amount <br> |
 | `borrowerAddress`  | address  | Address of borrower|
 
 -  emit allowed borrowing amount `event` based on function parameters.
