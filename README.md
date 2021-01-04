@@ -18,8 +18,8 @@ You do not need to deploy these contracts on the testnet/mainnet. Please do the 
 - Draw Out the Architecture diagram - Show how smart contracts are structured and interact with each other.  
 - Write the functions that need to be created in order for the above smart contracts to work with each other. Example: function transfer ( address dst , uint256 amount ){}  
 NOTE:  
-- What is the point of the above task?  
-- We will be building a similar system above and want to understand how you think about the various parameters and organization of code in a clean way  
+- What is the point of the above task ?  
+- We will be building a similar system above & want to understand how you think about the various parameters and organization of code in a clean way  
 
 
 ### Solution

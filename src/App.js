@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
-//import logo from '../logo.png';
+import logo from '../logo.png';
 import './App.css';
 import Betting from '../build/contracts/Betting.json';
 class App extends Component {

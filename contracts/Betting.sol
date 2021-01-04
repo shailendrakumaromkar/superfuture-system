@@ -2,7 +2,7 @@ pragma solidity 0.7.0;
 
 contract Betting {
     
-    /* DEFINING ALL THE STATE VARIABLES
+    /* DEFINING ALL THE STATE VARIABLE
        1. players - Array containing players address
        2. admin -  Contract admin
        3. totalBetAmount - Total Betting Amount from all PLayers
