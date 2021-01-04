@@ -23,7 +23,7 @@ NOTE:
 
 
 ### Solution
-Create Architecture Diagram with below smart contract function details:
+Create Architecture Diagram with below smart contract function details :
 
 #### Libraries : TBD
 
