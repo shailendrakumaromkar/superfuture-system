@@ -93,6 +93,7 @@ function checkAllowedCollateral(address asset, bool allowedeCollateral) public r
 
 ##### borrow()  
 function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address borrower) public returns  (bool){}  
+borrower must have deposited enough collatoral
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
