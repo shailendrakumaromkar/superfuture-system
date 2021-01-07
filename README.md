@@ -143,6 +143,8 @@ f. function approvedBorrowingAmount (uint8 creditScore, address borrowerAddress)
 ##### borrowerInterest()  
 function borrowerInterest(address borrower, uint8 creditStore, uint8 collateralRatio, uint256 assetSupply ){}  
 
+Mathematical Equation & Condition need to dervive : TBD  
+
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
 |borrower|address|Borrower address|
@@ -165,7 +167,9 @@ function borrowerInterest(address borrower, uint8 creditStore, uint8 collateralR
 -  Returns borrower interest based on specific condition met for a borrower.
 
 ##### liquidationfactor()
-liquidationfactor(address asset, uint256 liquidationThreshold, uint256 borrowingAmount) public returns (uint8) {}
+liquidationfactor(address asset, uint256 liquidationThreshold, uint256 borrowingAmount) public returns (uint8) {}  
+Mathematical Equation & Condition need to derive : TBD  
+
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
 | `asset`  | address  |address of the asset |
@@ -176,7 +180,9 @@ liquidationfactor(address asset, uint256 liquidationThreshold, uint256 borrowing
 
 ##### liquidationCall()  
 function liquidationCall(address collateral, address asset, address borrower, uint256 debtAmount) (){  
-require (liquidationfactor <1, "Collatoral is not available for liquidation") }
+require (liquidationfactor <1, "Collatoral is not available for liquidation") }  
+
+Condition need to defined : TBD  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
